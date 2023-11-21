@@ -1,0 +1,315 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1B1A1C;
+  padding: 24px 0;
+
+  @media (max-width: 1079px) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 12px 12px;
+  }
+  
+  &-logo {
+    @media (max-width: 1079px) {
+      img {
+        width: 137.934px;
+        height: 30px;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    gap: 40px;
+
+    @media (max-width: 1079px) {
+      display: none;
+    }
+
+    a, h3 {
+      color: #FFF;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+
+      &:hover {
+        color: #02C076;
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    .menu {
+      position: relative;
+
+      &-button {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        cursor: pointer;
+
+        .active {
+          color: #02C076;
+        }
+      }
+
+      &-dropdown {
+        position: absolute;
+        left: -16px;
+        top: 40px;
+        display: flex;
+        flex-direction: column;
+        background: #29282A;
+        border-radius: 8px;
+        padding: 8px 0;
+        
+        a {
+          padding: 10px 14px 10px 16px;
+          min-width: max-content;
+
+          &:hover {
+            background: #363537;
+            transition: all .3s ease-in-out;
+            color: #FFF;
+          }
+
+          span {
+            background: #FF783E;
+            padding: 1px 4px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #29282a;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  &-lang {
+    position: relative;
+
+    @media (max-width: 1079px) {
+      position: static;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      @media (max-width: 1079px) {
+        img {
+          width: 16px;
+        }
+      }
+
+      &-title {
+        padding: 0 8px 0 11px;
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+
+        @media (max-width: 1079px) {
+          padding: 0px 8px;
+        }
+      }
+
+      &:hover {
+        .button-title {
+          color: #02C076;
+          transition: all .3s ease-in-out;
+        }
+      }
+
+      .active {
+        color: #02C076;
+      }
+    }
+
+    .list {
+      position: absolute;
+      top: 40px;
+      background: #29282A;
+      border-radius: 8px;
+      padding: 8px 0;
+
+      @media (max-width: 1079px) {
+        top: 0;
+        left: 0;
+        background: #1B1A1C;
+        border-radius: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-button {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+
+        img {
+          background: #29282A;
+          padding: 4px;
+          border-radius: 8px;
+        }
+      }
+
+      &-item {
+        width: 200px;
+        padding: 10px 0 10px 16px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+        cursor: pointer;
+
+        @media (max-width: 1079px) {
+          height: 56px;
+          padding: 0;
+          justify-content: center;
+          gap: 12px;
+          font-size: 20px;
+        }
+
+        &:hover {
+          background: #363537;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &-burger {
+    .button {
+      img {
+        background: #29282A;
+        padding: 4px;
+        border-radius: 8px;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #1B1A1C;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-lang {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        display: flex;
+        align-items: center;
+        background: #29282A;
+        padding: 8px 16px;
+        border-radius: 8px;
+
+        h3 {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 24px;
+          color: #fff;
+          padding: 0 6px 0 11px;
+        }
+      }
+
+      &-close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        
+        img {
+          background: #29282A;
+          padding: 4px;
+          border-radius: 8px;
+        }
+      }
+
+      &-nav {
+        display: flex;
+        flex-direction: column;
+        
+        a, h3 {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          color: #fff;
+          height: 56px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        }
+
+        &-submenu {
+
+          &-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            max-width: 106px;
+            margin: 0 auto;
+
+            img {
+              position: absolute;
+              right: -16px;
+            }
+          }
+
+          .submenu {
+            a {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 24px;
+              color: #ffffffb8;
+              height: 100%;
+              padding: 8px 0 12px;
+              animation-duration: 600ms;
+              animation-name: blur;
+
+              span {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                color: #29282a;
+                background: #FF783E;
+                border-radius: 4px;
+                padding: 1px 4px;
+                margin-left: 6px;
+              }
+            }
+            
+            @keyframes blur {
+              from {
+                opacity: 0;
+                filter: blur(10px);
+              }
+            
+              to {
+                opacity: 1;
+                filter: blur(0);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
