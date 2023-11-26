@@ -1,6 +1,6 @@
 <template>
   <div class="site-header container">
-    <div class="site-header-burger mobile">
+    <div class="site-header-burger show">
       <div @click="toggleBurger" class="button">
         <img src="../assets/img/menu-icon.svg" alt="">
       </div>
@@ -10,21 +10,21 @@
           <h3>{{ selectedLang.lang }}</h3>
           <img src="../assets/img/green-arrow-down.svg">
         </div>
-        <div class="menu-close" @click="closeBurger">
+        <div @click="closeBurger" class="menu-close" >
           <img src="../assets/img/close-icon.svg" alt="">
         </div>
         <div class="menu-nav">
           <router-link to="/">
             Main
           </router-link>
-          <a href="">
+          <router-link :to="{name: 'About'}">
             About
-          </a>
-          <a href="">
+          </router-link>
+          <router-link :to="{name: 'Contacts'}">
             Contacts
-          </a>
-          <div class="menu-nav-submenu">
-            <div @click="toggleMenu" class="menu-nav-submenu-button">
+          </router-link>
+          <div class="submenu">
+            <div @click="toggleMenu" class="submenu-button">
               <h3 >
                 Partners
               </h3>
@@ -33,14 +33,14 @@
                 src="../assets/img/green-arrow-down.svg"
               >
             </div>
-            <div v-if="isMenuOpen" @click="closeMenu" class="submenu">
+            <div v-if="isMenuOpen" @click="closeMenu" class="submenu-dropdown">
               <a href="#">Affiliate program</a>
               <a href="#">API documentation<span>New</span></a>
             </div>
           </div>
-          <a href="">
+          <router-link :to="{name: 'How to use'}">
             How to use
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
@@ -50,9 +50,15 @@
       </router-link>
     </div>
     <div class="site-header-nav">
-      <a href="">How to use</a>
-      <a href="">About</a>
-      <a href="">Contact</a>
+      <router-link :to="{name: 'How to use'}">
+        How to use
+      </router-link>
+      <router-link :to="{name: 'About'}">
+        About
+      </router-link>
+      <router-link :to="{name: 'Contacts'}">
+        Contacts
+      </router-link>
       <div class="menu">
         <div @click="toggleMenu" class="menu-button">
           <h3 :class="{ 'active': isMenuOpen }">Partners</h3>
@@ -71,17 +77,17 @@
       <div @click="toggleList" class="button">
         <img :src="selectedLang.flag" alt=""/>
         <div :class="{ 'active': isListOpen }" class="button-title">
-          <div class="desktop">{{ selectedLang.lang }}</div>
-          <div class="mobile">{{ selectedLang.mob }}</div>
+          <div class="hidden">{{ selectedLang.lang }}</div>
+          <div class="show">{{ selectedLang.mob }}</div>
         </div>
         <img
           :style="{ transform: isListOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform .3s ease-in-out' }"
           src="../assets/img/green-arrow-down.svg"
-          class="img desktop"
+          class="img hidden"
         >
       </div>
       <div v-if="isListOpen" class="list">
-        <div class="list-button mobile" @click="closeList">
+        <div class="list-close show" @click="closeList">
           <img src="../assets/img/close-icon.svg" alt="">
         </div>
         <div v-for="object in filteredObjects" :key="object.id" @click="selectLang(object)" class="list-item">
@@ -180,7 +186,7 @@ export default {
   computed: {
     filteredObjects() {
       return this.langs.filter(obj => obj.id !== this.selectedLang.id);
-    },
+    }
   }
 }
 </script>

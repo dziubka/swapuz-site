@@ -28,16 +28,16 @@ a {
   text-decoration: none;
 }
 
-.desktop {
-  @media (max-width: 1079px) {
-    display: none;
-  }
-}
-
-.mobile {
+.show {
   display: none;
 
   @media (max-width: 1079px) {
     display: block;
+  }
+}
+
+.hidden {
+  @media (max-width: 1079px) {
+    display: none;
   }
 }

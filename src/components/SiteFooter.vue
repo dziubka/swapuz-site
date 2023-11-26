@@ -4,8 +4,8 @@
       <div class="site-footer-main">
         <div class="hero">
           <router-link to="/">
-            <img src="../assets/img/site-logo.svg" class="desktop" alt="">
-            <img src="../assets/img/site-logo-mob.svg" class="mobile" alt="">
+            <img src="../assets/img/site-logo.svg" class="hidden" alt="">
+            <img src="../assets/img/site-logo-mob.svg" class="show" alt="">
           </router-link>
           <div class="hero-desc">
             Do you want to make operations with Swapuz as handy as possible? Add it to bookmarks in one click!
@@ -15,12 +15,18 @@
           <div class="nav-links">
             <div class="nav-links-column">
               <h3>Company</h3>
-              <a href="">About</a>
-              <a href="">Contacts</a>
+              <router-link :to="{name: 'About'}">
+                About
+              </router-link>
+              <router-link :to="{name: 'Contacts'}">
+                Contacts
+              </router-link>
             </div>
             <div class="nav-links-column">
               <h3>Support</h3>
-              <a href="">How to use</a>
+              <router-link :to="{name: 'How to use'}">
+                How to use
+              </router-link>
               <a href="#">FAQ</a>
             </div>
           </div>
@@ -49,7 +55,7 @@
         </div>
         <div class="links">
           <a href="">Term of Use</a>
-          <a href="">Privacy Policy</a>
+          <a href="#">Privacy Policy</a>
         </div>
       </div>
     </div>
