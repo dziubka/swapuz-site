@@ -1,0 +1,74 @@
+.hero-block {
+  padding: 64px 0 81px;
+  
+  @media (min-width: 1079px) {
+    background-image: url('@/assets/img/about-hero-bg.png');
+    background-size: no-repeat;
+    background-position: center;
+  }
+
+  @media (max-width: 1079px) {
+    padding: 48px 0 40px;
+  }
+
+  &-content {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1079px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 4px;
+      position: relative;
+    }
+
+    &-text {
+      max-width: 480px;
+
+      @media (max-width: 1079px) {
+        text-align: center;
+        margin-top: 228px;
+        z-index: 1;
+      }
+
+      .title {
+        padding-bottom: 28px;
+
+        @media (max-width: 1079px) {
+          padding-bottom: 20px;
+        }
+
+        span {
+          color: #02C076;
+
+          @media (max-width: 1079px) {
+            color: #FFF;
+          }
+        }
+      }
+
+      .subtitle {
+        padding: 32px 0 16px;
+
+        @media (max-width: 1079px) {
+          padding: 24px 0 8px;
+        }
+      }
+    }
+
+    &-img {
+      max-width: 480px;
+
+      @media (max-width: 1079px) {
+        max-width: 336px;
+        position: absolute;
+        z-index: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
