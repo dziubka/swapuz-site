@@ -1,0 +1,131 @@
+.features-how-to-use {
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  @media (max-width: 1079px) {
+    padding: 48px 12px 64px;
+    gap: 56px;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .template {
+    @media (max-width: 1079px) {
+      padding: 0 4px;
+      margin: 0 auto;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      padding-top: 40px;
+
+      @media (max-width: 1079px) {
+        gap: 32px;
+        padding-top: 32px;
+      }
+      
+      .block {
+        display: flex;
+        gap: 64px;
+
+        @media (max-width: 1079px) {
+          flex-direction: column;
+          gap: 32px;
+        }
+
+        &-text {
+          max-width: 480px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          @media (max-width: 1079px) {
+            flex-direction: column;
+            gap: 16px;
+          }
+
+          &_title {
+            display: flex;
+            gap: 16px;
+
+            .num {
+              font-size: 18px;
+              width: 28px;
+              height: 28px;
+              background: #363537;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+
+          &_desc {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @media (max-width: 1079px) {
+              gap: 16px;
+            }
+
+            .subtitle {
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 22px;
+              color: #fff;
+              display: flex;
+              gap: 12px;
+
+              &-symbol {
+                color: #02c076;
+              }
+            }
+
+            .button {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              background: #02C076;
+              padding: 12px 18px;
+              border-radius: 8px;
+              width: max-content;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              color: #29282a;
+              cursor: pointer;
+
+              &:hover {
+                background: #01AD6A;
+                transition: all .3s ease-in-out;
+              }
+
+              @media (max-width: 1079px) {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &-img {
+          max-width: 432px;
+
+          @media (max-width: 1079px) {
+            margin: 0 auto;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
