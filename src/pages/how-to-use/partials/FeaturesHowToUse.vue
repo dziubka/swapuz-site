@@ -1,6 +1,6 @@
 <template>
   <div class="features-how-to-use container">
-    <div class="template">
+    <div class="template" id="object1">
       <h2>
         How to swap coins
       </h2>
@@ -80,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div class="template">
+    <div class="template" id="object2">
       <h2>
         Errors and fuckups
       </h2>

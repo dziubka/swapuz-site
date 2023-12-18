@@ -1,3 +1,134 @@
 .video-block {
-  
+  padding-bottom: 160px;
+
+  @media (max-width: 1079px) {
+    padding-bottom: 64px;
+  }
+
+  .template {
+    height: 480px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width: 1079px) {
+      height: 600px;
+      border-radius: 16px;
+    }
+
+    &-content {
+      padding: 32px 0 0 40px;
+      position: relative;
+      z-index: 3;
+
+      @media (max-width: 1079px) {
+        padding: 12px 20px 0;
+      }
+
+      &_updated {
+        color: #FFF;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        width: max-content;
+        border-radius: 4px;
+        background: #FF783E;
+        padding: 1px 4px;
+
+        @media (max-width: 1079px) {
+          margin: 0 auto;
+        }
+      }
+      
+      &_title {
+        padding-top: 20px;
+
+        @media (max-width: 1079px) {
+          padding-top: 12px;
+          text-align: center;
+
+          br {
+            display: none;
+          }
+        }
+
+        span {
+          color: #02C076;
+        }
+      }
+
+      &_desc {
+        padding-top: 24px;
+        max-width: 398px;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 28px;
+
+        @media (max-width: 1079px) {
+          padding-top: 16px;
+          font-size: 14px;
+          line-height: 20px;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+
+      &_buttons {
+        padding-top: 94px;
+        display: flex;
+        gap: 12px;
+
+        @media (max-width: 1079px) {
+          padding-top: 24px;
+          justify-content: center;
+        }
+
+        .button {
+          cursor: pointer;
+
+          @media (max-width: 1079px) {
+            max-width: 135px;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &-bg {
+      .background{
+        position: absolute;
+        top: -26px;
+        right: -195px;
+        z-index: 1;
+        width: 771.429px;
+        height: 600px;
+
+        @media (max-width: 1079px) {
+          top: 214px;
+        }
+      }
+
+      .phone {
+        width: 217px;
+        position: absolute;
+        bottom: -253px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 4;
+      }
+
+      video {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+      }
+    }
+  }
 }

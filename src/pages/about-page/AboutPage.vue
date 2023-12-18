@@ -1,8 +1,8 @@
 <template>
   <main-layout>
     <template #content>
-      <hero-block/>
-      <plates-block/>
+      <hero-about/>
+      <plates-about/>
       <features-block/>
       <partner-list/>
       <technical-partners/>
@@ -13,8 +13,8 @@
 
 <script>
 import MainLayout from '../../layouts/MainLayout.vue'
-import HeroBlock from '../../pages/about-page/partials/HeroBlock.vue'
-import PlatesBlock from '../../pages/about-page/partials/PlatesBlock.vue'
+import HeroAbout from './partials/HeroAbout.vue'
+import PlatesAbout from './partials/PlatesAbout.vue'
 import FeaturesBlock from '../../pages/about-page/partials/FeaturesBlock.vue'
 import PartnerList from '../../pages/main-page/partials/PartnerList.vue'
 import TechnicalPartners from '../../pages/main-page/partials/TechnicalPartners.vue'
@@ -24,8 +24,8 @@ export default {
   name: 'AboutPage',
   components: {
     MainLayout,
-    HeroBlock,
-    PlatesBlock,
+    HeroAbout,
+    PlatesAbout,
     FeaturesBlock,
     PartnerList,
     TechnicalPartners,
