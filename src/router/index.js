@@ -3,6 +3,8 @@ import MainPage from '../pages/main-page/MainPage.vue'
 import AboutPage from '../pages/about-page/AboutPage.vue'
 import ContactsPage from '../pages/contacts-page/ContactsPage.vue'
 import HowToUse from '../pages/how-to-use/HowToUse.vue'
+import TermsOfUse from '../pages/terms-of-use/TermsOfUse.vue'
+import PrintTermsOfUse from '../pages/terms-of-use/PrintTermsOfUse.vue'
 
 const routes = [
   {
@@ -24,6 +26,16 @@ const routes = [
     path: '/how-to-use',
     name: 'How to use',
     component: HowToUse
+  },
+  {
+    path: '/terms-of-use',
+    name: 'Terms of use',
+    component: TermsOfUse
+  },
+  {
+    path: '/terms-of-use-print',
+    name: 'Print terms of use',
+    component: PrintTermsOfUse
   }
 ]
 

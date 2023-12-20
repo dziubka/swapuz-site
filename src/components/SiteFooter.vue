@@ -54,7 +54,9 @@
           Copyright © 2020 - 2023 Swapuz!
         </div>
         <div class="links">
-          <a href="">Term of Use</a>
+          <router-link :to="{name: 'Terms of use'}">
+            Term of Use
+          </router-link>
           <a href="#">Privacy Policy</a>
         </div>
       </div>

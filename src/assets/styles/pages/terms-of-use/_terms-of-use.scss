@@ -1,0 +1,68 @@
+.terms-of-use {
+  padding: 40px 0 120px;
+
+  @media (max-width: 1079px) {
+    padding: 40px 12px 120px;
+  }
+
+  &-bg {
+    border-radius: 20px;
+    background: #FFF9E3;
+    padding: 56px 0 72px;
+    position: relative;
+
+    @media (max-width: 1079px) {
+      padding: 24px 16px;
+    }
+
+    .button {
+      &-print {
+        background: #29282A;
+        border-radius: 8px;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 32px;
+        right: 32px;
+
+        @media (max-width: 1079px) {
+          border-radius: 20px 0 0;
+          width: 56px;
+          height: 56px;
+          position: fixed;
+          top: auto;
+          right: 0;
+          bottom: 0;
+        }
+
+        &:hover {
+          opacity: 0.9;
+          transition: all .3s ease-in-out;
+        }
+      }
+
+      &-back {
+        background: #29282A;
+        border-radius: 8px;
+        width: max-content;
+        padding: 12px 12px 12px 24px;
+        color: #FFF9E3;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 40px auto 0;
+
+        &:hover {
+          opacity: 0.9;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+}
