@@ -1,18 +1,23 @@
 <template>
   <main-layout>
     <template #content>
-      <H1>Main Page</H1>
+      <hero-block/>
+      <plates-block/>
     </template>
   </main-layout>
 </template>
 
 <script>
 import MainLayout from '../../layouts/MainLayout.vue'
+import HeroBlock from './partials/HeroBlock.vue'
+import PlatesBlock from './partials/PlatesBlock.vue'
 
 export default {
   name: 'MainPage',
   components: {
-    MainLayout
+    MainLayout,
+    HeroBlock,
+    PlatesBlock
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="plates-block container">
-    <div class="plates-block-items padding-fix">
+    <div class="plates-block-items">
       <div
         v-for="(item, index) in items"
         :key="index"
@@ -24,24 +24,24 @@
 
 <script>
 export default {
-  name: 'PlatesAbout',
+  name: 'PlatesBlock',
   data () {
     return {
       items: [
         {
-          title: '1000000+ transactions',
-          desc: 'Swapuz provides the best exchange rate and transparent fee structure with no hidden fee.',
-          icon: require('@/assets/img/move_up-icon.svg')
+          title: 'Fastest 2-10 min exchanges',
+          desc: 'Swapuz has established itself as one of the fastest providers, so your swaps will be instant.',
+          icon: require('@/assets/img/timer-icon.svg')
         },
         {
-          title: '11387 users trust us',
-          desc: "Users stay with us as Swapuz strives to meet and support everyone's unique needs",
-          icon: require('@/assets/img/switch_account-icon.svg')
+          title: 'High exchange limits',
+          desc: "The Swapuz platform has secured the opportunity for extremely large swaps, finding our limits is hard.",
+          icon: require('@/assets/img/auto_graph-icon.svg')
         },
         {
-          title: '48 patrners growth with us',
-          desc: 'Swapuz offers comprehensive solutions and set of tools to meet the needs of partners',
-          icon: require('@/assets/img/business_center-icon.svg')
+          title: 'Online support 24/7',
+          desc: 'Our users have the ability to contact our experts for support through any convenient means.',
+          icon: require('@/assets/img/support_agent-icon.svg')
         }
       ]
     }

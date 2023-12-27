@@ -1,0 +1,211 @@
+.hero-block {
+  padding: 88px 0 120px;
+
+  @media (max-width: 1079px) {
+    padding: 20px 0 40px;
+  }
+
+  &_content {
+    display: flex;
+    gap: 80px;
+
+    @media (max-width: 1079px) {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &-head {
+      h2 {
+        @media (max-width: 1079px) {
+          text-align: center;
+        }
+
+        span {
+          color: #02C076;
+          font-weight: 700;
+        }
+      }
+
+      .desc {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 28px;
+        padding-top: 24px;
+
+        @media (max-width: 1079px) {
+          text-align: center;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      .reviews {
+        color: #FFF;
+        font-size: 14px;
+        display: flex;
+        align-items: end;
+        gap: 8px;
+        padding-top: 24px;
+
+        @media (max-width: 1079px) {
+          justify-content: center;
+          padding: 0;
+        }
+
+        img {
+          height: 19px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        gap: 12px;
+        padding-top: 34px;
+
+        @media (max-width: 1079px) {
+          display: none;
+        }
+
+        &-link {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-exchange {
+      width: 100%;
+      max-width: 520px;
+      background: #29282A;
+      border-radius: 20px;  
+      padding: 28px 44px 44px;
+      box-sizing: border-box;
+      height: 100%;
+
+      @media (max-width: 1079px) {
+        margin: 0 auto;
+        padding: 12px;
+      }
+      
+      .head {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px;
+
+        @media (max-width: 1079px) {
+          max-width: 432px;
+          margin: 4px auto 0;
+        }
+
+        &-title {
+          font-weight: 900;
+          font-size: 24px;
+          line-height: 24px;
+          color: #fff;
+
+          @media (max-width: 1079px) {
+            font-size: 16px;
+          }
+        }
+
+        &-rate {
+          display: flex;
+          gap: 6px;
+          
+          &_switch {
+            cursor: pointer;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: #02c076;
+          }
+
+          &_support {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .icon {
+              cursor: pointer;
+
+              &:hover {
+                path {
+                  fill: #02C076;
+                  fill-opacity: 1;
+                  transition: all .3s ease-in-out;
+                }
+              }
+            }
+
+            .icon:hover + .info {
+              opacity: 1;
+              filter: blur(0px);
+              z-index: 1;
+            }
+
+            .info {
+              width: 244px;
+              background: #363537;
+              border-radius: 8px;
+              padding: 12px;
+              box-shadow: 0 4px 12px #1b1a1ca3;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 18px;
+              color: #fff;
+              position: absolute;
+              left: -100px;
+              top: 30px;
+              user-select: none;
+              opacity: 0;
+              filter: blur(10px);
+              transition: 0.3s ease;
+              z-index: -1;
+
+              @media (max-width: 1079px) {
+                left: auto;
+                right: -22px;
+              }
+            }
+          }
+        }
+      }
+
+      .inputs {
+        margin-top: 20px;
+
+        @media (max-width: 1079px) {
+          max-width: 432px;
+          margin: 16px auto 0;
+        }
+      }
+
+      .button {
+        margin-top: 24px;
+        width: 100%;
+        background: #02C076;
+        border-radius: 8px;
+        padding: 18px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: #29282a;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+          background: #01ad6a;
+          transition: all .3s ease-in-out;
+        }
+
+        @media (max-width: 1079px) {
+          max-width: 432px;
+          margin: 24px auto 0;
+        }
+      }
+    }
+  }
+}

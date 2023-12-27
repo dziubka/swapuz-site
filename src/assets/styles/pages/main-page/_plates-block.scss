@@ -1,12 +1,19 @@
-.plates-about {
-  &-items {
-    display: flex;
-    gap: 4px;
+.plates-block {
+
+  .padding-fix {
     padding: 0 16px;
 
     @media (max-width: 1079px) {
-      flex-direction: column;
       padding: 0 4px;
+    }
+  }
+
+  &-items {
+    display: flex;
+    gap: 4px;
+
+    @media (max-width: 1079px) {
+      flex-direction: column;
     }
 
     .item {
