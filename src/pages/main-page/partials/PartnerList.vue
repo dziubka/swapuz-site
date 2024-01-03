@@ -2,6 +2,9 @@
   <div class="partner-list">
     <h2 class="partner-list-title">
       Join our<br class="show"> partner list
+      <div class="button hidden">
+        Join now
+      </div>
     </h2>
     <div class="partner-list-carousel">
       <splide :options="options1" class="slider">
@@ -16,6 +19,11 @@
       </splide>
       <div class="shadow before"/>
       <div class="shadow after"/>
+    </div>
+    <div class="button_container show">
+      <div class="button">
+       Join now
+      </div>
     </div>
   </div>
 </template>
