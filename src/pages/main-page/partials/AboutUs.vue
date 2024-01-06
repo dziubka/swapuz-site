@@ -1,8 +1,8 @@
 <template>
   <div class="about-us container">
     <div class="about-us-content">
-      <h2 class="title">Press about us</h2>
-      <splide :options="options" class="slider">
+      <h2>Press about us</h2>
+      <splide :options="options" ref="splide" class="slider">
         <splide-slide class="slider--slide">
           <img src="../../../assets/img/crypto_wisser-logo.svg" alt="">
           <div class="title">
@@ -40,6 +40,14 @@
           </div>
         </splide-slide>
       </splide>
+      <div class="slider-arrows">
+        <div class="slider-arrows_arrow" @click="prevSlide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3310_245)"><path d="M12 20L13.41 18.59L7.83 13L20 13V11L7.83 11L13.41 5.41L12 4L4 12L12 20Z" fill="#1B1A1C"></path></g><defs><clipPath id="clip0_3310_245"><rect width="24" height="24" fill="white" transform="matrix(-1 0 0 -1 24 24)"></rect></clipPath></defs></svg>
+        </div>
+        <div class="slider-arrows_arrow" @click="nextSlide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3310_241)"><path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="#1B1A1C"></path></g><defs><clipPath id="clip0_3310_241"><rect width="24" height="24" fill="white"></rect></clipPath></defs></svg>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -59,12 +67,23 @@ export default {
       options: {
         pagination: false,
         arrows: false,
-        rewind: true,
-        type: 'loop',
+        isNavigation: true,
         perPage: 3,
         gap: 16,
-        start: 0,
-        easing: 'ease'
+        type: 'loop',
+        focus: 'center',
+      }
+    }
+  },
+  methods: {
+    prevSlide() {
+      if (this.$refs.splide) {
+        this.$refs.splide.go('-1');
+      }
+    },
+    nextSlide() {
+      if (this.$refs.splide) {
+        this.$refs.splide.go('+1');
       }
     }
   }

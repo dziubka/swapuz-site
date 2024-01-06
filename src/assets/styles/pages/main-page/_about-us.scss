@@ -2,19 +2,27 @@
   padding-bottom: 120px;
 
   @media (max-width: 1079px) {
-    padding-bottom: 48px;
+    padding: 0 0 48px;
+    overflow: hidden;
   }
 
   &-content {
-    .title {
+    position: relative;
+
+    h2 {
       @media (max-width: 1079px) {
         text-align: center;
       }
     }
 
     .slider {
-      padding-top: 47px;
+      padding: 47px 12px 0;
 
+      @media (max-width: 1079px) {
+        padding: 24px 0 0;
+        width: 1056px;
+      }
+      
       &--slide {
         background: #FFFFFF0A;
         border-radius: 20px;
@@ -23,6 +31,16 @@
         min-height: 272px;
         cursor: pointer;
 
+        @media (max-width: 1079px) {
+          min-width: 344px;
+        }
+
+        &:hover {
+          .title {
+            color: #02C076;
+            transition: all .3s ease-in-out;
+          }
+        }
 
         .title {
           padding-top: 16px;
@@ -39,6 +57,42 @@
           font-size: 14px;
           font-weight: 400;
           line-height: 20px;
+        }
+      }
+
+      .splide__slide{
+        border: none;
+
+        &.is-active {
+          border: none;
+        }
+      }
+
+      &-arrows {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        display: flex;
+        gap: 16px;
+
+        @media (max-width: 1079px) {
+          display: none;
+        }
+
+        &_arrow {
+          width: 48px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #02C076;
+          border-radius: 8px;
+          cursor: pointer;
+
+          &:hover {
+            background: #01AD6A;
+            transition: all .3s ease-in-out;
+          }
         }
       }
     }
