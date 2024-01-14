@@ -27,7 +27,9 @@
               <router-link :to="{name: 'How to use'}">
                 How to use
               </router-link>
-              <a href="#">FAQ</a>
+              <router-link :to="{name: 'Error'}">
+                FAQ
+              </router-link>
             </div>
           </div>
           <div class="nav-socials">
@@ -51,7 +53,7 @@
       </div>
       <div class="site-footer-copyright">
         <div class="text">
-          Copyright © 2020 - 2023 Swapuz!
+          Copyright © 2020 - 2024 Swapuz!
         </div>
         <div class="links">
           <router-link :to="{name: 'Terms of use'}">

@@ -2,12 +2,14 @@
   padding-bottom: 120px;
 
   @media (max-width: 1079px) {
-    padding: 0 0 48px;
+    padding-bottom: 48px;
     overflow: hidden;
   }
 
   &-content {
     position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
 
     h2 {
       @media (max-width: 1079px) {
@@ -16,11 +18,10 @@
     }
 
     .slider {
-      padding: 47px 12px 0;
+      padding-top: 47px;
 
       @media (max-width: 1079px) {
-        padding: 24px 0 0;
-        width: 1056px;
+        padding-top: 24px;
       }
       
       &--slide {

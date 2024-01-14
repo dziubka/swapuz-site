@@ -1,5 +1,5 @@
 <template>
-  <div class="about-us container">
+  <div class="about-us">
     <div class="about-us-content">
       <h2>Press about us</h2>
       <splide :options="options" ref="splide" class="slider">
@@ -72,6 +72,7 @@ export default {
         gap: 16,
         type: 'loop',
         focus: 'center',
+        start: 1
       }
     }
   },

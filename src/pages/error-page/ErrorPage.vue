@@ -1,20 +1,20 @@
 <template>
   <main-layout>
     <template #content>
-      <contact-us/>
+      <error-block/>
     </template>
   </main-layout>
 </template>
 
 <script>
 import MainLayout from '../../layouts/MainLayout.vue'
-import ContactUs from './partials/ContactUs.vue'
+import ErrorBlock from './partials/ErrorBlock.vue'
 
 export default {
-  name: 'ContactsPage',
+  name: 'ErrorPage',
   components: {
     MainLayout,
-    ContactUs
+    ErrorBlock
   }
 }
 </script>

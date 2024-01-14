@@ -5,6 +5,8 @@ import ContactsPage from '../pages/contacts-page/ContactsPage.vue'
 import HowToUse from '../pages/how-to-use/HowToUse.vue'
 import TermsOfUse from '../pages/terms-of-use/TermsOfUse.vue'
 import PrintTermsOfUse from '../pages/terms-of-use/PrintTermsOfUse.vue'
+import ErrorPage from '../pages/error-page/ErrorPage.vue'
+
 
 const routes = [
   {
@@ -36,6 +38,11 @@ const routes = [
     path: '/terms-of-use-print',
     name: 'Print terms of use',
     component: PrintTermsOfUse
+  },
+  {
+    path: '/error',
+    name: 'Error',
+    component: ErrorPage
   }
 ]
 
