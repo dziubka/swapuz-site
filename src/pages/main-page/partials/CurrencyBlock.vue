@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="currency-block-coins">
+    <div class="currency-block-coins mob">
       <table class="table">
         <tr>
           <th class="currency">
@@ -271,6 +271,12 @@ export default {
           } else if (filter === 'down') {
             return coin.dayRate.includes('-');
           }
+        })
+
+        this.coins.sort((a, b) => {
+          const rateA = parseFloat(a.dayRate);
+          const rateB = parseFloat(b.dayRate);
+          return filter === 'up' ? rateA - rateB : rateB - rateA;
         })
       }
     }
